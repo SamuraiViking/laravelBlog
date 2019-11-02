@@ -4,10 +4,24 @@
 
     <h1> Blogs </h1>
 
-    @foreach($blogs as $blog)
+    <ul>
 
-        <h1> {{ $blog->title }} </h1>
+        @foreach($blogs as $blog)
+            
+            <a href="/blogs/{{ $blog->id }}">
 
-    @endforeach
+                <li>{{ $blog->title }}</li>
+
+            </a>
+
+        @endforeach
+    
+    </ul>
+
+    <div>
+
+        <a href="blogs/create">Create New Blog</a>
+
+    </div>
 
 @endsection

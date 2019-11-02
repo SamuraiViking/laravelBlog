@@ -15,5 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/blogs','BlogController@index');
-Route::get('/blogs/create', 'BlogController@create');
+Route::resource('blogs', 'BlogsController');
